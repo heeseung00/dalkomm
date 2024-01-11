@@ -1,0 +1,55 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+#wrap {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aqua; */
+  width: 90%;
+  padding: 44px 0;
+  margin: 0 auto;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo img {
+  width: 100px;
+}
+
+/* flex space-between 해결 중 */
+header ul {
+  display: flex;
+  margin: 0 120px;
+}
+
+header ul li {
+  padding: 0 44px;
+  font-size: 15px;
+  font-weight: 800;
+}
