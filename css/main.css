@@ -16,40 +16,151 @@ li {
 }
 
 #wrap {
+  display: block;
   width: 100%;
+  height: 100%;
+  /* background-color: aqua;*/
 }
 
 header {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  /* overflow: hidden; */
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  background-color: rgb(188, 221, 210);
+}
+
+/* 서브 메뉴 배경 */
+header::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  background-color: rgb(203, 223, 199);
+  opacity: 0;
 }
 
 .header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* background-color: aqua; */
   width: 90%;
-  padding: 44px 0;
-  margin: 0 auto;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  margin: 0 106px;
 }
 
-.logo {
-  display: inline-block;
+.header-inner .logo {
+  width: 10%;
+  text-align: center;
+
+  background-color: rgb(212, 212, 230);
 }
 
-.logo img {
+.header-inner .logo img {
   width: 100px;
 }
 
-/* flex space-between 해결 중 */
-header ul {
+/* 네비게이션 */
+/* 메뉴 정렬  */
+.header-inner .nav {
+  /* margin: 0 auto; */
+  font-size: 18px;
   display: flex;
-  margin: 0 120px;
+  margin: 0 auto;
+  background-color: antiquewhite;
 }
 
-header ul li {
-  padding: 0 44px;
-  font-size: 15px;
-  font-weight: 800;
+.gnb {
+  display: flex;
+  /* justify-content: center;
+  vertical-align: middle;
+  height: 120px; */
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* 네비게이션 메뉴 */
+.gnb > li {
+  position: relative;
+  width: 171px;
+
+  background-color: rgb(223, 213, 200);
+}
+
+.gnb > li > a {
+  font-weight: 600;
+}
+
+.gnb > li > a:hover {
+  color: #ff592e;
+}
+
+.gnb > li > a:hover .depth2 li a {
+  color: #ff592e;
+}
+
+/* .gnb > li > a:hover .gnb:hover .depth2 {
+  opacity: 1;
+}
+
+.gnb:hover header::before {
+  opacity: 1;
+} */
+
+.depth2 {
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  z-index: 999;
+  text-align: start;
+  opacity: 1;
+  transition: all 0.1s;
+  display: none;
+  /* transition-duration: 0.5s; */
+
+  /* background-color: rgb(212, 200, 223); */
+}
+
+.depth2 li {
+  /* text-align: center; */
+  padding: 10px 0;
+}
+
+.depth2 li a:hover {
+  color: #ff592e;
+}
+
+.header-inner .header_shop_btn {
+  width: 85px;
+  height: 32px;
+  border: 1px solid transparent;
+  background-color: rgb(255, 89, 46);
+  padding: 4px 17px;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 배너 */
+
+.banner {
+  background: url("../images/banner_img_row.png") no-repeat;
+  background-size: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  z-index: 1;
 }
