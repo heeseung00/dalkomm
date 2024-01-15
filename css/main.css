@@ -15,6 +15,10 @@ li {
   list-style: none;
 }
 
+.clearfix {
+  padding: 0 106px;
+}
+
 #wrap {
   display: block;
   width: 100%;
@@ -29,10 +33,10 @@ header {
   z-index: 999;
   /* overflow: hidden; */
   /* background-color: rgba(255, 255, 255, 0.7); */
-  background-color: rgb(188, 221, 210);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* 서브 메뉴 배경 */
+/* 서브 메뉴 배경 추가*/
 header::before {
   content: "";
   display: block;
@@ -40,13 +44,13 @@ header::before {
   height: 200px;
   position: absolute;
   top: 120px;
-  background-color: rgb(203, 223, 199);
+  background-color: rgba(255, 255, 255, 0.8);
   opacity: 0;
 }
 
 .header-inner {
   width: 90%;
-  height: 120px;
+  height: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,72 +64,89 @@ header::before {
   width: 10%;
   text-align: center;
 
-  background-color: rgb(212, 212, 230);
+  /* background-color: rgb(212, 212, 230); */
 }
 
 .header-inner .logo img {
-  width: 100px;
+  width: 130px;
 }
 
 /* 네비게이션 */
 /* 메뉴 정렬  */
 .header-inner .nav {
   /* margin: 0 auto; */
-  font-size: 18px;
+  font-size: 19px;
   display: flex;
   margin: 0 auto;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 
 .gnb {
   display: flex;
-  /* justify-content: center;
-  vertical-align: middle;
-  height: 120px; */
+  position: relative;
+  gap: 30px;
+  align-items: center;
+  height: 150px;
+  font-size: 23px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* 네비게이션 메뉴 */
-.gnb > li {
+.gnb li {
+  display: flex;
+  align-items: center;
   position: relative;
   width: 171px;
-
-  background-color: rgb(223, 213, 200);
+  /* height: 120px; */
+  /* background-color: rgb(223, 213, 200); */
 }
 
-.gnb > li > a {
+.gnb > li {
+  display: flex;
+  align-items: center;
+}
+
+.gnb li a {
   font-weight: 600;
+}
+
+.gnb > li:nth-child(4) {
+  color: aqua;
 }
 
 .gnb > li > a:hover {
   color: #ff592e;
 }
 
-.gnb > li > a:hover .depth2 li a {
+/* 헤더 메인 메뉴, 서브 메뉴 함께 hover */
+.gnb > li > a:hover .depth2 > li > a {
   color: #ff592e;
 }
-
 /* .gnb > li > a:hover .gnb:hover .depth2 {
   opacity: 1;
-}
+}*/
 
-.gnb:hover header::before {
+/* .gnb:hover header::before {
+  content: "";
   opacity: 1;
 } */
 
+/* 서브 메뉴 , drop 메뉴*/
 .depth2 {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
-  top: 150px;
+  top: 60px;
   left: 0px;
   z-index: 999;
+  width: 100%;
   text-align: start;
   opacity: 1;
   transition: all 0.1s;
+  padding: 20px 0;
   display: none;
-  /* transition-duration: 0.5s; */
-
-  /* background-color: rgb(212, 200, 223); */
 }
 
 .depth2 li {
@@ -133,34 +154,80 @@ header::before {
   padding: 10px 0;
 }
 
-.depth2 li a:hover {
+/* .depth2 li a:hover {
   color: #ff592e;
-}
+} */
 
 .header-inner .header_shop_btn {
   width: 85px;
   height: 32px;
   border: 1px solid transparent;
   background-color: rgb(255, 89, 46);
-  padding: 4px 17px;
+  padding: 5px 15px;
+  text-align: center;
   border-radius: 14px;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: bold;
   color: #fff;
   cursor: pointer;
 }
 
 /* 배너 */
-
 .banner {
   background: url("../images/banner_img_row.png") no-repeat;
   background-size: cover;
   display: block;
-  position: absolute;
+  width: 100%;
+  position: relative;
   top: 0;
   left: 0;
-  right: 0;
-
-  height: 100%;
+  height: 1352px;
   z-index: 1;
+}
+.banner-textBox {
+  /* display: flex;
+  flex-direction: column; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  text-align: start;
+}
+
+.banner-textBox h1 {
+  /* font-size: 54px; */
+  font-size: 70px;
+  width: 100%;
+  line-height: 90px;
+  letter-spacing: -5px;
+  color: #f43b00;
+  margin-bottom: 90px;
+}
+
+.banner-textBox > .banner-btn {
+  /* font-size: 24px; */
+  font-size: 27px;
+  font-weight: 900;
+  color: #ff592e;
+  border: 1px solid #ff592e;
+  padding: 20px 50px;
+  cursor: pointer;
+}
+
+.banner-swiper {
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  height: 1px;
+}
+
+.banner-swiper-bullet {
+  padding: 1px 10px;
+  margin: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: rgba(255, 89, 46, 0.5);
 }
