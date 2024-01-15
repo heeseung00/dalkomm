@@ -15,8 +15,9 @@ li {
   list-style: none;
 }
 
-.clearfix {
-  padding: 0 106px;
+.container {
+  width: 100%;
+  padding: 0 15%;
 }
 
 #wrap {
@@ -50,14 +51,12 @@ header::before {
 
 .header-inner {
   width: 90%;
-  height: 150px;
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   position: relative;
-
-  margin: 0 106px;
 }
 
 .header-inner .logo {
@@ -77,28 +76,40 @@ header::before {
   /* margin: 0 auto; */
   font-size: 19px;
   display: flex;
-  margin: 0 auto;
   /* background-color: antiquewhite; */
 }
 
 .gnb {
   display: flex;
+  flex-direction: row;
   position: relative;
-  gap: 30px;
+  /* gap: 30px; */
   align-items: center;
-  height: 150px;
-  font-size: 23px;
-  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 20px;
+  height: 100%;
+  font-size: 17px;
+  /* background-color: rgba(255, 255, 255, 0.5); */
 }
 
 /* 네비게이션 메뉴 */
 .gnb li {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  width: 171px;
+  padding: 0 44px;
+  /* width: 171px; */
+  height: 100%;
   /* height: 120px; */
   /* background-color: rgb(223, 213, 200); */
+}
+
+.gnb li a:nth-child(4)::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1px;
+  background-color: #f43b00;
 }
 
 .gnb > li {
@@ -107,7 +118,7 @@ header::before {
 }
 
 .gnb li a {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .gnb > li:nth-child(4) {
@@ -158,6 +169,7 @@ header::before {
   color: #ff592e;
 } */
 
+/* nav 버튼 */
 .header-inner .header_shop_btn {
   width: 85px;
   height: 32px;
@@ -166,7 +178,7 @@ header::before {
   padding: 5px 15px;
   text-align: center;
   border-radius: 14px;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
   cursor: pointer;
@@ -175,20 +187,21 @@ header::before {
 /* 배너 */
 .banner {
   background: url("../images/banner_img_row.png") no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: block;
   width: 100%;
+  height: 1600px;
   position: relative;
   top: 0;
   left: 0;
-  height: 1352px;
+  height: 1200px;
   z-index: 1;
 }
 .banner-textBox {
   /* display: flex;
   flex-direction: column; */
   position: absolute;
-  top: 50%;
+  top: 500px;
   transform: translateY(-50%);
   z-index: 9999;
   text-align: start;
@@ -196,7 +209,7 @@ header::before {
 
 .banner-textBox h1 {
   /* font-size: 54px; */
-  font-size: 70px;
+  font-size: 60px;
   width: 100%;
   line-height: 90px;
   letter-spacing: -5px;
@@ -204,7 +217,7 @@ header::before {
   margin-bottom: 90px;
 }
 
-.banner-textBox > .banner-btn {
+.banner-textBox > .banner-bt-btn {
   /* font-size: 24px; */
   font-size: 27px;
   font-weight: 900;
@@ -217,7 +230,7 @@ header::before {
 .banner-swiper {
   display: block;
   position: absolute;
-  bottom: 100px;
+  bottom: 200px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99999;
@@ -225,9 +238,96 @@ header::before {
 }
 
 .banner-swiper-bullet {
-  padding: 1px 10px;
-  margin: 0 20px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
   border: 1px solid transparent;
   border-radius: 50%;
   background-color: rgba(255, 89, 46, 0.5);
+}
+
+/* 신메뉴 */
+.new-menu {
+  background: url("../images//bg_news-item.png") no-repeat;
+  background-position: 0 -100px;
+  width: 100%;
+  width: 100%;
+  height: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.new-menu-bg {
+}
+.new-menu_titleBOX {
+  margin: 20px 0;
+}
+
+.new-menu_titleBOX > * {
+  margin-bottom: 45px;
+}
+
+.new-menu_titleBOX h3 {
+  font-size: 35px;
+  color: #f43b00;
+}
+
+.new-menu_titleBOX h1 {
+  font-size: 60px;
+  color: #f43b00;
+}
+
+.new-menu_titleBOX p {
+  font-size: 21px;
+  color: #1a1a1a;
+  font-weight: 300;
+  line-height: 33px;
+}
+
+.new-menu_view {
+  margin-top: 150px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.new-menu_view img {
+  margin-left: 5px;
+}
+
+/* 신메뉴 리스트 */
+
+.new-menu-list {
+  width: 58vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.new-menu-list ul {
+  display: flex;
+}
+
+.new-menu-list ul li {
+  margin: 0 65px;
+}
+
+.new-menu-list ul li > * {
+  margin-bottom: 10px;
+}
+.new-menu-list ul li img {
+  width: 12.6875vw;
+}
+
+/* 신메뉴 리스트 텍스트 */
+.menu-name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.menu-text {
+  margin-top: 20px;
 }
