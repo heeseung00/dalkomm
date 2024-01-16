@@ -3,13 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/favi.png" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- 다시 처음으로 돌아가는 스와이프 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 라이브러리 연결 -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- 애니메이션? 라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="images/favi.png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    
+    <link rel="stylesheet" href="css/main.css" />
+
+    
+    
     <title>달콤커피_클론코딩</title>
   </head>
   <body>
@@ -97,23 +106,71 @@
       </header>
 
       <!-- 배너 -->
-      <div class="banner container">
-        <div class="banner-bg"></div>
-        <div class="banner-textBox">
-          <h1>
-            달콤이 주는<br />
-            용돈 받으세요~
-          </h1>
-          <a href="#" class="banner-bt-btn">자세히 보기</a>
+      <!-- Swiper -->
+      <div class="slider-banner">
+        <div class="swiper banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!--container-->
+              <div class="banner-textBox container">
+                <h1>
+                  달콤이 주는<br />
+                  용돈 받으세요~
+                </h1>
+                <a href="#" class="banner-bt-btn">자세히 보기</a>
+              </div>
+              <img
+                src="images/banner_img_row.png"
+                alt=""
+                class="banner-texBox"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="banner-textBox container">
+                <h1>
+                  감자빵&고구마빵 EVENT
+                </h1>
+                <a href="#" class="banner-bt-btn">자세히 보기</a>
+              </div>
+              <img
+                src="images/tms_img_potato_bg.png"
+                alt=""
+                class="banner-texBox"
+              />
+            </div>
+            <div class="swiper-slide">
+              <div class="banner-textBox container">
+                <h1>
+                  지금 딸기와<br />
+                  사랑에 빠져보세요
+                </h1>
+                <a href="#" class="banner-bt-btn strawberry">자세히 보기</a>
+              </div>
+              <img
+                src="images/tms_bg_strawberry3.png"
+                alt=""
+                class="banner-texBox"
+              />
+            </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="banner-swiper">
-          <span class="banner-swiper-bullet"></span>
-          <span class="banner-swiper-bullet"></span>
-          <span class="banner-swiper-bullet"></span>
-        </div>
-        <!-- <img src="images/banner_img_row.png" alt="" /> -->
+        <!-- <div class="banner container">
+          <div class="banner-textBox">
+            <h1>
+              달콤이 주는<br />
+              용돈 받으세요~
+            </h1>
+            <a href="#" class="banner-bt-btn">자세히 보기</a>
+          </div>
+          <div class="banner-swiper">
+            <span class="banner-swiper-bullet"></span>
+            <span class="banner-swiper-bullet"></span>
+            <span class="banner-swiper-bullet"></span>
+          </div>
+        </div> -->
       </div>
-
       <!-- 컨텐츠 -->
 
       <!-- 신메뉴 -->
@@ -201,10 +258,85 @@
           <a href="#"><button>구매하러 가기</button></a>
         </div>
       </div>
+
       <!-- notice -->
-      <!-- 창업/파트너 -->
+      <div class="notice">
+        <div class="notice-header">
+          <h1 class="notice-title">Notice</h1>
+        </div>
+        <div class="notice-wrap container">
+          <ul class="notice-list ">
+            <a href="#">
+              <li>
+                <img src="images/data_1_20240112175006.png" alt="">
+                <div class="notice-textBox">
+                  <div class="notice-list-subTitle">STORY</div>
+                  <div class="notice-list-title">Strawberry Cupid</div>
+                  <p>지금은 딸기와 사랑에 빠질 시간</p>
+                </div>
+              </li>
+            </a>
+          <ul class="notice-list ">
+            <a href="#">
+              <li>
+                <img src="images/notice_data_2_20240111171836.png" alt="">
+                <div class="notice-textBox">
+                  <div class="notice-list-subTitle">STORY</div>
+                  <div class="notice-list-title">Music Playlist by DJ Dal.K♬</div>
+                  <p>낭만 한도 초과 2024의 낭만을 채워줄 노래</p>
+                </div>
+              </li>
+            </a>
+          <ul class="notice-list ">
+            <a href="#">
+              <li>
+                <img src="images/notice_data_3.png" alt="">
+                <div class="notice-textBox">
+                  <div class="notice-list-subTitle">STORY</div>
+                  <div class="notice-list-title">감자빵&고구마빵 드시고 드립백 받아가세요~</div>
+                  <p>2024 첫 이벤트!</p>
+                </div>
+              </li>
+            </a>
+            
+          </ul>
+        </div>
+        
+      </div>
+
+      <!-- 서포터즈 -->
+      <div class="support">
+        <div class="support-wrap container">
+          <div class="support-titleBox">
+            <h1>카페 창업의 꿈,<br>
+              달콤이 서포터즈가 되겠습니다</h1>
+            <p>달콤은 파트너 여러분들의 다양한 창업 조건에 맞는 '맞춤형 점포 개설'을 통해<br>
+              카페 창업의 문턱을 낮추고 진정한 상생의 가치를 구현합니다.</p>
+            <a href="#"><button>가맹점 개설 안내</button></a>
+          </div>
+        </div>
+      </div>
       <!-- 오더&길찾기 -->
       <!-- 하단 -->
     </div>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: false,
+        keyboard: true,
+        autoplay: {
+          // 10초마다
+         delay: 10000,
+         disableOnInteraction: false,
+       },
+      });
+    </script>
   </body>
 </html>
