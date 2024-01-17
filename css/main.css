@@ -362,12 +362,13 @@ header::before {
 /* ===== 시그니처 ===== */
 
 .signature {
+  position: relative;
   width: 100%;
   height: 800px;
+  cursor: pointer;
+  color: rgba(71, 71, 71, 0.8);
   background: url("../images/bg_signature-item.png") no-repeat;
   background-position: 100% 0;
-  position: relative;
-  color: rgba(71, 71, 71, 0.8);
 }
 
 .signature-titleBox {
@@ -408,7 +409,7 @@ header::before {
   margin-top: 60px;
 }
 
-/* notice */
+/*====== notice ======*/
 .notice {
   display: block;
   width: 100%;
@@ -476,7 +477,7 @@ header::before {
 /* ===== 서포터즈 ===== */
 .support {
   width: 100%;
-  height: 800px;
+  height: 700px;
   background: url("../images/supporter_bg.jpg") no-repeat;
 }
 
@@ -497,6 +498,7 @@ header::before {
 .support-titleBox p {
   font-size: 25px;
   line-height: 35px;
+  color: #4b4a4a;
 }
 
 .support-titleBox button {
@@ -504,15 +506,294 @@ header::before {
   padding: 15px 45px;
   margin-top: 35px;
   background: transparent;
+  cursor: pointer;
   border: 1px solid #1a1a1a;
 }
 
-/* 스와이프 */
+/* ====== 오더 & 길찾기 ======= */
+.marginal {
+  width: 100%;
+  height: 600px;
+  display: block;
+  position: relative;
+}
+.marginal-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.marginal-wrap h1 {
+  font-size: 55px;
+  color: #f43b00;
+  margin-bottom: 40px;
+}
+
+.marginal-wrap p {
+  font-size: 25px;
+  color: #f43b00;
+  margin-bottom: 100px;
+  line-height: 33px;
+  font-weight: 500;
+}
+
+.marginal-textWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* gap: 50px; */
+}
+
+.marginal-textBox-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background: url("../images/order_bg.png") no-repeat;
+  background-position: 90% 150%;
+  background-color: #f0eae8;
+  padding-left: 12%;
+}
+
+.marginal-textBox-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background: url("../images/location_map.png") no-repeat;
+  background-color: #f43b00;
+  background-position: 100% 100%;
+  padding: 0 12% 0 200px;
+}
+
+.marginal-textBox-right input {
+}
+
+.marginal-textBox-right h1,
+.marginal-textBox-right p {
+  color: #fff;
+}
+
+.marginal-map-btn button {
+  width: 100px;
+  height: 30px;
+}
+
+.marginal_view {
+  font-weight: 800;
+}
+
+.marginal_view :nth-child(2) {
+  margin-left: 8px;
+}
+
+/* marginal-map-btn*/
+.marginal-map-btn {
+  display: flex;
+  align-items: center;
+  color: #ff592e;
+
+  /* background-color: #fbf4f4; */
+}
+
+.marginal-map-btn input {
+  width: 220px;
+  font-size: 20px;
+  padding: 15px 10px;
+  background: url("../images/icon_zoom.png") no-repeat #fbf4e4;
+  background-position: 95% 50%;
+  color: #ff592e;
+  border: 1px solid transparent;
+}
+
+.marginal-map-btn input::placeholder {
+  color: #f43b00;
+}
+
+/* .marginal-map-btn button {
+  width: 40px;
+  height: 40px;
+} */
+
+/* ===== footer ===== */
+.footer {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.footer-wrap {
+  display: block;
+  width: 100%;
+  height: 850px;
+  padding: 130px 0;
+}
+
+/* footer-top */
+
+.footer-top {
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.footer-top::before {
+  content: "";
+  width: 72%;
+  height: 1px;
+  background-color: rgba(34, 34, 34, 0.2);
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-top .logo {
+  width: 80%;
+}
+
+.footer-top .logo img {
+  width: 200px;
+}
+
+.footer-top ul {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  gap: 200px;
+  margin: 0 100px;
+  /* flex-grow: 2; */
+}
+
+.footer-top .title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+
+.footer-top p {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.footer-top .title-contact {
+  color: #f43b00;
+}
+
+/* footer-bt */
+.footer-bt {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.family-site {
+  width: auto;
+  position: relative;
+  top: 0;
+}
+
+/* select 아래선 추가 */
+.family-site::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  position: absolute;
+  top: 100px;
+  background-color: #1a1a1a;
+}
+
+/* select 화살표 -> ' + ' 표시로 변경*/
+.family-site::after {
+  content: "+";
+  position: absolute;
+  top: 25px;
+  right: 0;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.family-site select {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  padding: 30px 0;
+  width: 330px;
+  appearance: none;
+}
+
+.family-site select option {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* .family-site option {
+  position: absolute;
+  top: 100px;
+} */
+
+.footer-bt-r {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.copyright {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: rgba(34, 34, 34, 0.4);
+
+  text-align: start;
+}
+
+.footer-bt-download {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.footer-bt-download button {
+  width: 190px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  border-radius: 40px;
+  background: transparent;
+  margin: 0 5px;
+}
+
+.footer-bt-download .app {
+  background: url("../images/apple.svg") no-repeat;
+  background-position: 15% 45%;
+  padding-left: 30px;
+}
+
+.footer-bt-download .google {
+  background: url("../images/google.svg") no-repeat;
+  background-position: 15% 45%;
+  padding-left: 40px;
+}
+
+.footer-bt-download .qrCode {
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* =====스와이프 ====*/
 .swiper-pagination {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .swiper-pagination-bullet {

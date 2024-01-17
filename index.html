@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 다시 처음으로 돌아가는 스와이프 -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- 라이브러리 연결 -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    <script src="js/main.js"></script>
+
     <!-- 애니메이션? 라이브러리 -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="icon" href="images/favi.png" />
     <link rel="stylesheet" href="css/reset.css" />
     
@@ -316,11 +320,103 @@
           </div>
         </div>
       </div>
+
       <!-- 오더&길찾기 -->
-      <!-- 하단 -->
+      <div class="marginal">
+        <div class="marginal-wrap">
+          <div class="marginal-textWrap">
+            <div class="marginal-textBox-left">
+              <h1>테이블 오더</h1>
+              <p>달콤 앱 고객님을 위한<br>
+              다양한 해택을 만나보세요
+              </p>
+              <div class="marginal_view">
+                <a href="#">VIEW MORE</a>
+                <a href="#"><img src="images/arrow_right.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="marginal-textBox-right ">
+                <h1>매장찾기</h1>
+                <p>내주변 가까운 달콤 매장을 찾아보세요!</p>
+                <form class="marginal-map-btn">
+                  <input type="text" id="search" name="search" placeholder="SEARCH">
+                  <!-- <button><img src="images/icon_zoom.png" alt=""></button> -->
+                </form>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <div class="footer-wrap ">
+          <div class="footer-top container">
+            <div class="logo">
+              <img src="images/dalkomm_bt_logo.svg" alt="">
+            </div>
+            <ul>
+              <li>
+                <div class="title">고객을 위한 달콤</div>
+                <p class="title-contact">문의하기 (Contact Us)</p>
+                <p>고객상담센터 1661-1399</p>
+              </li>
+              <li>
+                <div class="title">파트너를 위한 달콤</div>
+                <p>협력업체 문의</p>
+                <p>가맹 문의</p>
+                <p>제휴·마케팅 문의</p>
+                <p>브랜드 소개서</p>
+              </li>
+              <li>
+                <div class="title">개인정보 보호 및 약관</div>
+                <p>개인정보 처리방침</p>
+                <p>서비스 이용약관</p>
+                <p>위치기반서비스 이용약관</p>
+                <p>영상정보 처리기기 운영관리 방침</p>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bt container">
+            <div class="family-site">
+              <select name="다날" id="family-site-text">
+
+                <option value="#">FAMILY SITE</option>
+                <option value="#" selected>다날</option>
+                <option value="#">다날페이먼트</option>
+                <option value="#">다날엔터테인먼트</option>
+                <option value="#">비트코퍼레이션</option>
+                <option value="#">다날핀테크</option>
+                <option value="#">다날 재팬</option>
+                <option value="#">플렉스페이</option>
+                <option value="#">쏘시오리빙</option>
+                <option value="#">바통</option>
+                <option value="#">비밀리</option>
+                <option value="#">워너아이</option>
+                <option value="#">페이프로토콜</option>ㄴ
+              </select>
+            </div>
+            <div class="footer-bt-r">
+              <div class="copyright">
+                <span><a href="">주)다날에프엔비 +</a></span> | 주소지 : 경기도 성남시 분당구 황새울로 359번길 7, 한국정보공학 3층<br>
+                <p>대표이사 : 심순열 | 사업자등록번호 : 144-81-09353 | 통신판매업신고 : 제 2016-성남분당-0680 호<br></p>
+                <p>Copyright ⓒ 2022 (주)달콤 All Rights Reserved.</p>
+                
+              </div>
+              <div class="footer-bt-download">
+                <a href="#" ><button class="app"><i class="apple"></i>App store</button></a>
+                <a href="#"><button class="google">Google play</button></a>
+                <img src="images/ft_QRCodeImg.jpg" alt="" class="qrCode">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </footer>
     </div>
     <!-- Initialize Swiper -->
-    <script>
+    <!-- <script>
       var swiper = new Swiper(".swiper", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -337,6 +433,6 @@
          disableOnInteraction: false,
        },
       });
-    </script>
+    </script> -->
   </body>
 </html>
