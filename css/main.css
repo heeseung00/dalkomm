@@ -273,6 +273,7 @@ header::before {
 /* =====신메뉴===== */
 .new-menu {
   display: flex;
+  /* gap: 20px; */
   background: url("../images//bg_news-item.png") no-repeat;
   /* background-position: 0; */
   width: 100%;
@@ -325,7 +326,7 @@ header::before {
   overflow: hidden;
   position: absolute;
   top: 150px;
-  right: 0;
+  right: 0px;
   font-size: 16px;
   text-align: center;
   color: #f43b00;
@@ -344,7 +345,7 @@ header::before {
 }
 
 .new-menu-list ul li img {
-  width: 80%;
+  width: 200px;
   /* width: 12.6875vw; */
 }
 
@@ -638,14 +639,14 @@ header::before {
   padding-bottom: 50px;
 }
 
-.footer-top::before {
+/* .footer-top::before {
   content: "";
   width: 72%;
   height: 1px;
   background-color: rgba(34, 34, 34, 0.2);
   position: absolute;
   bottom: 0;
-}
+} */
 
 .footer-top .logo {
   width: 80%;
@@ -670,27 +671,39 @@ header::before {
   margin-bottom: 45px;
 }
 
+.title a:hover {
+  color: blue;
+}
+
 .footer-top p {
   font-size: 15px;
   margin-bottom: 25px;
 }
 
-.footer-top .title-contact {
+.footer-top .title-contact a {
   color: #f43b00;
+  font-weight: 500;
 }
 
 /* footer-bt */
 .footer-bt {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
   margin: 50px 0;
+}
+
+.footer-bt-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 35%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .family-site {
   width: auto;
   position: relative;
-  top: 0;
+  top: 50px;
 }
 
 /* select 아래선 추가 */
@@ -700,7 +713,7 @@ header::before {
   width: 100%;
   height: 2.5px;
   position: absolute;
-  top: 100px;
+  top: 70px;
   background-color: #1a1a1a;
 }
 
@@ -708,7 +721,7 @@ header::before {
 .family-site::after {
   content: "+";
   position: absolute;
-  top: 25px;
+  top: 10px;
   right: 0;
   font-size: 30px;
   font-weight: 500;
@@ -719,14 +732,12 @@ header::before {
   font-size: 18px;
   font-weight: 600;
   border: 1px solid transparent;
-  padding: 30px 0;
+  padding: 20px 0;
   width: 330px;
   appearance: none;
 }
 
 .family-site select option {
-  display: flex;
-  flex-direction: column-reverse;
 }
 
 /* .family-site option {
@@ -739,6 +750,7 @@ header::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 50px 0;
 }
 
 .copyright {
@@ -746,11 +758,15 @@ header::before {
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
   font-weight: 600;
   color: rgba(34, 34, 34, 0.4);
 
   text-align: start;
+  display: inline;
+}
+
+.copyright a {
 }
 
 .footer-bt-download {
@@ -768,7 +784,8 @@ header::before {
   border: 1px solid rgba(34, 34, 34, 0.2);
   border-radius: 40px;
   background: transparent;
-  margin: 0 5px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 .footer-bt-download .app {
@@ -793,6 +810,7 @@ header::before {
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 9px;
   /* gap: 10px; */
 }
 
@@ -802,4 +820,16 @@ header::before {
   height: 10px;
   border: 1px solid transparent;
   border-radius: 50%;
+}
+
+.new-menu-list .swiper-button-prev {
+  background: url(../images/btn_nav_prev.png) no-repeat;
+}
+.new-menu-list .swiper-button-next {
+  background: url(../images/btn_nav_next.png) no-repeat;
+}
+
+.new-menu-list .swiper-button-next::after,
+.new-menu-list .swiper-button-prev::after {
+  display: none;
 }

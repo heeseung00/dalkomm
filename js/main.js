@@ -1,18 +1,32 @@
 $(document).ready(function () {
-  var swiper = new Swiper(".swiper", {
+  var banner = new Swiper(".banner", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".slider-banner .swiper-pagination",
       clickable: true,
     },
     mousewheel: false,
     keyboard: true,
     autoplay: {
       // 10초마다
-      delay: 10000,
+      delay: 4000,
       disableOnInteraction: false,
+    },
+  });
+
+  var newMenuList = new Swiper(".new-menu-list", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: ".new-menu-list .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".new-menu-list .swiper-button .swiper-button-next",
+      prevEl: ".new-menu-list .swiper-button .swiper-button-prev",
     },
   });
 });
