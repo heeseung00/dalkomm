@@ -27,6 +27,25 @@
   </head>
   <body>
     <div id="wrap">
+      <!-- 고정 아이콘 -->
+      <div class="floating-wrap">
+        <div class="floating-fox">
+          <a href=""><img src="images/tms_img_20221116101413_1.png" alt="" class="fox-icon">
+          <div class="signature-buy">
+            <a href="#">
+              <div class="textBox">
+                달콤<br>
+                시그니처<br>
+                ♥<br>
+                액상커피<br>
+                ▼
+              </div>
+              <div class="arrow"></div>
+            </a>
+          </div>
+        </div>
+        <a href=""><button class="close-icon" type="button"></button></a>
+      </div>
       <!-- 헤더 -->
       <header class="container">
         <div class="header-inner">
@@ -409,7 +428,8 @@
                 <h1>매장찾기</h1>
                 <p>내주변 가까운 달콤 매장을 찾아보세요!</p>
                 <form class="marginal-map-btn">
-                  <input type="text" id="search" name="search" placeholder="SEARCH">
+                  <input type="text" id="text" name="text" placeholder="SEARCH">
+                  <a href="#"><input type="button" id="search"></a>
                   <!-- <button><img src="images/icon_zoom.png" alt=""></button> -->
                 </form>
             
@@ -425,7 +445,7 @@
             <div class="logo">
               <img src="images/dalkomm_bt_logo.svg" alt="">
             </div>
-            <ul>
+            <ul class="footer-top-text">
               <li>
                 <div class="title">고객을 위한 달콤</div>
                 <p class="title-contact"><a href="">문의하기 (Contact Us)</a></p>
@@ -454,7 +474,7 @@
                 <select name="다날" id="family-site-text">
   
                   <option value="#">FAMILY SITE</option>
-                  <option value="#" selected>다날</option>
+                  <option value="#">다날</option>
                   <option value="#">다날페이먼트</option>
                   <option value="#">다날엔터테인먼트</option>
                   <option value="#">비트코퍼레이션</option>

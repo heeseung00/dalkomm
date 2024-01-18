@@ -337,7 +337,7 @@ header::before {
 }
 
 .new-menu-list ul li {
-  margin: 0 30px;
+  margin: 0 10px;
 }
 
 .new-menu-list ul li > * {
@@ -574,12 +574,6 @@ header::before {
 .marginal-textBox-right p {
   color: #fff;
 }
-
-.marginal-map-btn button {
-  width: 100px;
-  height: 30px;
-}
-
 .marginal_view {
   font-weight: 800;
 }
@@ -593,18 +587,29 @@ header::before {
   display: flex;
   align-items: center;
   color: #ff592e;
-
-  /* background-color: #fbf4f4; */
+  background-color: #fbf4e4;
+  width: 250px;
+  height: 60px;
+  overflow: hidden;
 }
 
 .marginal-map-btn input {
-  width: 220px;
-  font-size: 20px;
+  width: 200px;
+  height: 60px;
+  font-size: 23px;
   padding: 15px 10px;
-  background: url("../images/icon_zoom.png") no-repeat #fbf4e4;
   background-position: 95% 50%;
   color: #ff592e;
+  background-color: #fbf4e4;
   border: 1px solid transparent;
+}
+
+.marginal-map-btn #search {
+  width: 50px;
+  height: 60px;
+  background: url("../images/icon_zoom.png") no-repeat center;
+  background-color: #fbf4e4;
+  cursor: pointer;
 }
 
 .marginal-map-btn input::placeholder {
@@ -656,33 +661,63 @@ header::before {
   width: 200px;
 }
 
-.footer-top ul {
+.footer-top-text {
   width: 100%;
   display: flex;
   justify-content: start;
-  gap: 200px;
+  gap: 180px;
   margin: 0 100px;
   /* flex-grow: 2; */
 }
+.footer-top-text li {
+  width: 170px;
+}
 
-.footer-top .title {
+.footer-top-text .title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 45px;
 }
 
-.title a:hover {
+.footer-top-text .title a:hover {
   color: blue;
 }
 
-.footer-top p {
+.footer-top-text p {
   font-size: 15px;
   margin-bottom: 25px;
 }
 
-.footer-top .title-contact a {
+.footer-top-text .title-contact a {
   color: #f43b00;
   font-weight: 500;
+}
+
+.footer-top-text a {
+  position: relative;
+  transition: 0.1s ease-in-out;
+}
+
+.footer-top-text a:hover {
+  color: #000;
+  font-weight: 700;
+}
+
+.footer-top-text a:hover::after {
+  opacity: 1;
+}
+
+.footer-top-text a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
 }
 
 /* footer-bt */
@@ -803,6 +838,73 @@ header::before {
 .footer-bt-download .qrCode {
   width: 100px;
   margin-left: 10px;
+}
+
+/* ====고정 아이콘==== */
+.floating-wrap {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 99999999;
+}
+
+.floating-wrap img {
+  width: 100px;
+}
+
+.floating-fox {
+  position: relative;
+}
+
+.floating-fox:hover .signature-buy {
+  display: block;
+}
+
+.signature-buy {
+  display: none;
+  position: absolute;
+  top: -120px;
+  background: #f43b00;
+  width: 100%;
+  height: 110px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  line-height: 19px;
+  padding: 10px 0;
+}
+
+.signature-buy a .textBox {
+  color: #fff;
+  font-weight: 600;
+}
+
+.signature-buy a .arrow {
+}
+
+.floating-wrap a {
+  display: inline-block;
+  width: 100px;
+}
+
+/* .fox-icon::before {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background-color: #f43b00;
+} */
+
+.floating-wrap button {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  background: url("../images/floating_close.svg") no-repeat center;
+  cursor: pointer;
 }
 
 /* =====스와이프 ====*/

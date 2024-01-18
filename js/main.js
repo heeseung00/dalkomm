@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   var newMenuList = new Swiper(".new-menu-list", {
     slidesPerView: 3,
-    spaceBetween: 0,
+    spaceBetween: 40,
     loop: true,
     pagination: {
       el: ".new-menu-list .swiper-pagination",
