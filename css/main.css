@@ -35,24 +35,24 @@ body {
 /* =====헤더==== */
 
 header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 999;
   /* overflow: hidden; */
   /* background-color: rgba(255, 255, 255, 0.7); */
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* 서브 메뉴 배경 추가*/
 header::before {
   content: "";
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   position: absolute;
   top: 120px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   opacity: 0;
 }
 
@@ -84,6 +84,21 @@ header::before {
   font-size: 19px;
   display: flex;
   /* background-color: antiquewhite; */
+}
+
+/* nav 버튼 */
+.header-inner .header_shop_btn {
+  width: 85px;
+  height: 32px;
+  border: 1px solid transparent;
+  background-color: rgb(255, 89, 46);
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
 }
 
 .gnb {
@@ -128,43 +143,64 @@ header::before {
   font-weight: bold;
 }
 
-.gnb > li:nth-child(4) {
-  color: aqua;
+.gnb li .news {
+  position: relative;
 }
 
-.gnb > li > a:hover {
+.gnb li .news::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  background-color: #f43b00;
+}
+
+/* 헤더 메뉴 호버 효과 */
+.gnb li a:hover {
   color: #ff592e;
+}
+
+.gnb li a:hover .gnb li .depth2 {
+  display: block;
+}
+
+.gnb:hover header::before {
+  opacity: 1;
 }
 
 /* 헤더 메인 메뉴, 서브 메뉴 함께 hover */
-.gnb > li > a:hover .depth2 > li > a {
+/* .gnb > li > a:hover .depth2 > li > a {
   color: #ff592e;
 }
+
+.gnb > li > a:hover .depth2 {
+  display: block;
+} */
 /* .gnb > li > a:hover .gnb:hover .depth2 {
   opacity: 1;
 }*/
 
-/* .gnb:hover header::before {
-  content: "";
-  opacity: 1;
-} */
-
 /* 서브 메뉴 , drop 메뉴*/
 .depth2 {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: start; */
+  /* justify-content: center; */
   flex-direction: column;
   position: absolute;
-  top: 60px;
+  top: 69px;
   left: 0px;
   z-index: 999;
   width: 100%;
-  text-align: start;
-  opacity: 1;
+  height: 200px;
+  background-color: #f0eae8;
+
+  opacity: 0;
   transition: all 0.1s;
   padding: 20px 0;
-  display: none;
+  /* display: none; */
 }
 
 .depth2 li {
@@ -172,35 +208,17 @@ header::before {
   padding: 10px 0;
 }
 
-/* .depth2 li a:hover {
-  color: #ff592e;
-} */
-
-/* nav 버튼 */
-.header-inner .header_shop_btn {
-  width: 85px;
-  height: 32px;
-  border: 1px solid transparent;
-  background-color: rgb(255, 89, 46);
-  padding: 5px 15px;
-  text-align: center;
-  border-radius: 14px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-}
-
 /* =====배너=====*/
 .banner {
   /* background: url("../images/banner_img_row.png") no-repeat;
   background-size: cover; */
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 1000px;
   position: relative;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1;
 }
 
@@ -230,7 +248,7 @@ header::before {
   width: 100%;
   line-height: 80px;
   letter-spacing: -5px;
-  color: #ff592e;
+  color: #f43b00;
   margin-bottom: 90px;
 }
 
@@ -238,8 +256,8 @@ header::before {
   /* font-size: 24px; */
   font-size: 25px;
   font-weight: 900;
-  color: #ff592e;
-  border: 1px solid #ff592e;
+  color: #f43b00;
+  border: 1px solid #f43b00;
   padding: 20px 40px;
   cursor: pointer;
 }
@@ -276,7 +294,7 @@ header::before {
   /* gap: 20px; */
   background: url("../images//bg_news-item.png") no-repeat;
   /* background-position: 0; */
-  width: 100%;
+  width: 100vw;
   height: 1000px;
   margin: 0 auto;
   position: relative;
@@ -695,26 +713,28 @@ header::before {
 
 .footer-top-text a {
   position: relative;
-  transition: 0.1s ease-in-out;
 }
 
 .footer-top-text a:hover {
   color: #000;
   font-weight: 700;
+  transition: 0.4s ease-in-out;
 }
 
 .footer-top-text a:hover::after {
   opacity: 1;
+  width: 100%;
 }
 
-.footer-top-text a::after {
+.footer-top-text li p a::after {
   content: "";
-  width: 100%;
+  width: 0%;
   height: 2px;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
+
   left: 0;
-  bottom: -5px;
+  bottom: -3px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
   transition-duration: 0.3s;
