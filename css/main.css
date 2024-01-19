@@ -143,11 +143,11 @@ header::before {
   font-weight: bold;
 }
 
-.gnb li .news {
+.news {
   position: relative;
 }
 
-.gnb li .news::after {
+.gnb li .news::before {
   content: "";
   width: 4px;
   height: 4px;
@@ -163,13 +163,27 @@ header::before {
   color: #ff592e;
 }
 
-.gnb li a:hover .gnb li .depth2 {
+.gnb-title:hover::after {
+  transition: 0.5s ease;
+  width: 100%;
+}
+
+.gnb-title::after {
+  display: block;
+  margin: 10px 0;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #f43b00;
+}
+
+/* .gnb li a:hover .gnb li .depth2 {
   display: block;
 }
 
 .gnb:hover header::before {
   opacity: 1;
-}
+} */
 
 /* 헤더 메인 메뉴, 서브 메뉴 함께 hover */
 /* .gnb > li > a:hover .depth2 > li > a {
@@ -238,7 +252,7 @@ header::before {
   height: auto;
   top: 500px;
   transform: translateY(-50%);
-  z-index: 9999;
+  z-index: 999999;
   text-align: start;
 }
 
@@ -729,10 +743,9 @@ header::before {
 .footer-top-text li p a::after {
   content: "";
   width: 0%;
-  height: 2px;
+  height: 1px;
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
-
   left: 0;
   bottom: -3px;
   opacity: 0;
@@ -876,30 +889,38 @@ header::before {
   position: relative;
 }
 
+.signature-buy {
+  display: none;
+  position: absolute;
+  top: -130px;
+  left: 8px;
+  background: url("../images/textbox-bg.svg") no-repeat center;
+  width: 100px;
+  height: 125px;
+  border-radius: 10px;
+  text-align: center;
+  /* overflow: hidden; */
+  line-height: 19px;
+  padding: 10px 0;
+  color: #111;
+  z-index: 999999;
+}
+
 .floating-fox:hover .signature-buy {
   display: block;
 }
 
-.signature-buy {
-  display: none;
+.textBox {
   position: absolute;
-  top: -120px;
-  background: #f43b00;
-  width: 100%;
-  height: 110px;
-  border-radius: 10px;
-  text-align: center;
-  overflow: hidden;
-  line-height: 19px;
-  padding: 10px 0;
-}
-
-.signature-buy a .textBox {
+  top: 15px;
+  left: 17px;
   color: #fff;
-  font-weight: 600;
 }
 
-.signature-buy a .arrow {
+.textBox svg {
+  width: 15px;
+  height: 15px;
+  color: #fff;
 }
 
 .floating-wrap a {
