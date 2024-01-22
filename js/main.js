@@ -29,33 +29,54 @@ $(document).ready(function () {
       prevEl: ".new-menu-list .swiper-button .swiper-button-prev",
     },
   });
+});
 
-  // var closed = document.querySelector(".floating-wrap");
+function FloatingWrap() {
+  var floatingWrap = document.querySelector(".floating-wrap");
+  floatingWrap.style.display = "none";
+}
 
-  // const floatButton = document.querySelector(".close-icon");
-  // floatButton.addEventListener("click", function () {
-  //   window.self.close(closed);
-  // });
- 
-  const body = document.querySelector("floating-wrap");
-  const modal = document.querySelector(".close-icon");
+// const toggleBtn = document.querySelector(".close-icon");
+// const float = document.querySelector(".floating-fox");
 
-  // isOpen 값에 따라 스크롤을 제어하는 함수
-  function controlScroll(isOpen) {
-    if (isOpen) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "auto";
-    }
-  }
+// toggleBtn.addEventListener("click", function () {
+//   float.style.display = "none";
+// });
+// var closed = document.querySelector(".floating-wrap");
 
-  // 초기 모달 상태 설정
-  const isOpen = true;
-  controlScroll(isOpen);
+// const floatButton = document.querySelector(".close-icon");
+// floatButton.addEventListener("click", function () {
+//   window.self.close(closed);
+// });
 
-  modal.addEventListener("click", function () {
-    modal.style.display = "none";
+// const body = document.querySelector("floating-wrap");
+// const modal = document.querySelector(".close-icon");
 
-    // 모달이 닫힐 때는 스크롤을 다시 활성화
-    controlScroll(false);
-  });
+// // isOpen 값에 따라 스크롤을 제어하는 함수
+// function controlScroll(isOpen) {
+//   if (isOpen) {
+//     body.style.overflow = "hidden";
+//   } else {
+//     body.style.overflow = "auto";
+//   }
+// }
+
+// // 초기 모달 상태 설정
+// const isOpen = true;
+// controlScroll(isOpen);
+
+// modal.addEventListener("click", function () {
+//   modal.style.display = "none";
+
+//   // 모달이 닫힐 때는 스크롤을 다시 활성화
+//   controlScroll(false);
+// });
+
+// 헤더 메뉴 드롭다운
+// const toggleBtn = document.querySelector("#toggle-button");
+// const menu = document.querySelector(".popup-menu");
+
+// // 반응형 웹 햄버거 메뉴 클릭 시 메뉴 펼침, 숨김 처리
+// toggleBtn.addEventListener("onclick", () => {
+//   menu.classList.toggle("active");
+// });

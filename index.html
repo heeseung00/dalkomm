@@ -9,31 +9,34 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+
+   <!-- 애니메이션? 라이브러리 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
+  <!-- 제이쿼리 -->
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 
-    <!-- 애니메이션? 라이브러리 -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+   
+
 
     <link rel="stylesheet" href="css/reset.css" />
-    
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="images/favicon.ico">
 
-    
-    
+
     <title>달콤커피_클론코딩</title>
   </head>
   <body>
     <div id="wrap">
       <!-- 고정 아이콘 -->
       <div class="floating-wrap">
+        <a href="#"><button class="close-icon" type="button"  onclick="FloatingWrap()"></button></a>
         <div class="floating-fox">
-          <a href=""><img src="images/tms_img_20221116101413_1.png" alt="" class="fox-icon">
+          <a href="#"><img src="images/tms_img_20221116101413_1.png" alt="" class="fox-icon">
           <div class="signature-buy">
             <a href="#">
               <div class="textBox">
@@ -46,7 +49,6 @@
             </a>
           </div>
         </div>
-        <a href=""><button class="close-icon" type="button" onclick=""></button></a>
       </div>
       <!-- 헤더 -->
       <header class="header">
@@ -93,40 +95,10 @@
                 </ul>
               </li>
               <li>
-                <a href="#"><button class="header_shop_btn">SHOP</button></a>
+                <a href="#"><button class="gnb_shop_btn">SHOP</button></a>
               </li>
             </ul>
           </nav>
-          <!-- <nav class="nav">
-            <ul>
-              <li>
-                <a href="#"
-                  >Dal.Komm
-                  <ul class="sub_menu">
-                    <li><a href="">브랜드 이야기</a></li>
-                    <li><a href="">App 소개</a></li>
-                    <li><a href="">다날에프엔비 이야기</a></li>
-                  </ul>
-                </a>
-              </li>
-              <li><a href="#">메뉴</a></li>
-              <li><a href="#">매장</a></li>
-              <li><a href="#">새로운 소식</a></li>
-              <li><a href="#">창업안내</a></li>
-              <li>
-                <a href="#"><span class="header_shop">SHOP</span></a>
-              </li>
-            </ul>
-            <ul class="depth1">
-              <li>
-                
-              </li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </nav> -->
         </div>
       </header>
 
@@ -280,59 +252,11 @@
               </ul>
               <div class="swiper-button">
                 <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+                <div class="swiper-button-prev"></div>
               </div>
               
             </div>
           </div>
-  
-          <!-- <ul>
-            <li>
-              <img src="images/li_data_1.png" alt="" />
-              <p class="menu-name">스트로베리 라떼</p>
-              <p class="menu-name-sub">Strawberry Latte</p>
-              <p class="menu-text">
-                상큼하고 달콤한 국내산 딸기가 듬뿍<br />
-                들어가 시원하게 즐길 수 있는 스트로베리 라떼
-              </p>
-            </li>
-            <li>
-              <img src="images/li_data_2.png" alt="" />
-              <p class="menu-name">스트로베리 라떼</p>
-              <p class="menu-name-sub">Strawberry Latte</p>
-              <p class="menu-text">
-                상큼하고 달콤한 국내산 딸기가 듬뿍<br />
-                들어가 시원하게 즐길 수 있는 스트로베리 라떼
-              </p>
-            </li>
-            <li>
-              <img src="images/li_data_3.png" alt="" />
-              <p class="menu-name">스트로베리 라떼</p>
-              <p class="menu-name-sub">Strawberry Latte</p>
-              <p class="menu-text">
-                상큼하고 달콤한 국내산 딸기가 듬뿍<br />
-                들어가 시원하게 즐길 수 있는 스트로베리 라떼
-              </p>
-            </li>
-            <li>
-              <img src="images/li_data_4.png" alt="" />
-              <p class="menu-name">스트로베리 라떼</p>
-              <p class="menu-name-sub">Strawberry Latte</p>
-              <p class="menu-text">
-                상큼하고 달콤한 국내산 딸기가 듬뿍<br />
-                들어가 시원하게 즐길 수 있는 스트로베리 라떼
-              </p>
-            </li>
-            <li>
-              <img src="images/li_data_5.png" alt="" />
-              <p class="menu-name">스트로베리 라떼</p>
-              <p class="menu-name-sub">Strawberry Latte</p>
-              <p class="menu-text">
-                상큼하고 달콤한 국내산 딸기가 듬뿍<br />
-                들어가 시원하게 즐길 수 있는 스트로베리 라떼
-              </p>
-            </li>
-          </ul> -->
         </div>
       </div>
 
@@ -416,7 +340,7 @@
       <div class="marginal">
         <div class="marginal-wrap">
           <div class="marginal-textWrap">
-            <div class="marginal-textBox-left">
+            <div class="marginal-textBox-left" >
               <h1>테이블 오더</h1>
               <p>달콤 앱 고객님을 위한<br>
               다양한 해택을 만나보세요
@@ -470,7 +394,7 @@
             </ul>
           </div>
           <div class="footer-bt container">
-            <div class="footer-bt-wrap">
+            <div class="footer-bt-wrap container">
 
               <div class="family-site">
                 <select name="다날" id="family-site-text">
