@@ -2,10 +2,14 @@
 
 @media screen and (max-width: 768px) {
   .header-inner .hamburger {
-    display: block;
+    opacity: 1;
   }
 
-  .gnb > li {
+  .gnb {
     display: none;
+  }
+
+  .header .logo {
+    top: 5px;
   }
 }
