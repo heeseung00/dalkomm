@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+     <!-- 제이쿼리 -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
     <!-- 라이브러리 연결 -->
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
 
-   <!-- 애니메이션? 라이브러리 -->
+   <!-- AOS 애니메이션 라이브러리 -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <!-- 제이쿼리 -->
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+ 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
@@ -34,7 +36,7 @@
     <div id="wrap">
       <!-- 고정 아이콘 -->
       <div class="floating-wrap">
-        <a href="#"><button class="close-icon" onclick="FloatingWrap()"></button></a>
+        <a href="javascript:;"><button class="close-icon" onclick="FloatingWrap()"></button></a>
         <div class="floating-fox">
           <a href="#"><img src="images/tms_img_20221116101413_1.png" alt="" class="fox-icon">
           <div class="signature-buy">
@@ -56,6 +58,7 @@
           <a href="" class="logo">
             <img src="images/dalkomm_bt_logo.svg" alt="달콤 로고" />
           </a>
+
           <nav class="nav">
             <ul class="gnb">
               <li>
@@ -97,22 +100,22 @@
               <li>
                 <a href="#"><button class="gnb_shop_btn">SHOP</button></a>
               </li>
-            </ul>
-            
+            </ul> 
           </nav>
-          
+
+          <a href="#" class="hamburger">
+            <img src="images/hamburger.svg" alt="메뉴바" />
+          </a>
         </div>
-        <a href="#" class="hamburger">
-          <img src="images/hamburger.svg" alt="메뉴바" />
-        </a>
+       
       </header>
 
       <!-- 배너 -->
       <!-- Swiper -->
       <div class="slider-banner">
         <div class="swiper banner">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+          <div class="swiper-wrapper ">
+            <div class="swiper-slide ">
               <!--container-->
               <div class="banner-textBox container">
                 <h1>
@@ -141,12 +144,12 @@
               />
             </div>
             <div class="swiper-slide">
-              <div class="banner-textBox container">
+              <div class="banner-textBox">
                 <h1>
                   지금 딸기와<br />
                   사랑에 빠져보세요
                 </h1>
-                <a href="#" class="banner-bt-btn strawberry">자세히 보기</a>
+                <a href="#" class="banner-bt-btn strawberry container">자세히 보기</a>
               </div>
               <img
                 src="images/tms_bg_strawberry3.png"
@@ -154,30 +157,14 @@
                 class="banner-texBox"
               />
             </div>
-            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <!-- <div class="banner container">
-          <div class="banner-textBox">
-            <h1>
-              달콤이 주는<br />
-              용돈 받으세요~
-            </h1>
-            <a href="#" class="banner-bt-btn">자세히 보기</a>
-          </div>
-          <div class="banner-swiper">
-            <span class="banner-swiper-bullet"></span>
-            <span class="banner-swiper-bullet"></span>
-            <span class="banner-swiper-bullet"></span>
-          </div>
-        </div> -->
       </div>
       <!-- 컨텐츠 -->
 
       <!-- 신메뉴 -->
       <div class="new-menu container">
-        <div class="new-menu-bg"></div>
         <div class="new-menu_titleBOX">
           <h3>#Strawberry</h3>
           <h1>달콤 신메뉴</h1>
@@ -262,7 +249,7 @@
               
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
 
       <!-- 시그니처 -->
@@ -288,7 +275,7 @@
         <div class="notice-header">
           <h1 class="notice-title">Notice</h1>
         </div>
-        <div class="notice-wrap container">
+        <div class="notice-wrap container" >
           <ul class="notice-list ">
             <a href="#">
               <li>
@@ -399,7 +386,7 @@
             </ul>
           </div>
           <div class="footer-bt container">
-            <div class="footer-bt-wrap container">
+            <div class="footer-bt-wrap">
 
               <div class="family-site">
                 <select name="다날" id="family-site-text">
@@ -440,24 +427,5 @@
         
       </footer>
     </div>
-    <!-- Initialize Swiper -->
-    <!-- <script>
-      var swiper = new Swiper(".swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        mousewheel: false,
-        keyboard: true,
-        autoplay: {
-          // 10초마다
-         delay: 10000,
-         disableOnInteraction: false,
-       },
-      });
-    </script> -->
   </body>
 </html>

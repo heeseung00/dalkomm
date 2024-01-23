@@ -35,3 +35,6 @@ function FloatingWrap() {
   var floatingWrap = document.querySelector(".floating-wrap");
   floatingWrap.style.display = "none";
 }
+
+// AOS 애니메이션
+AOS.init();

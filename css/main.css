@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 * {
   margin: 0;
   padding: 0;
@@ -31,49 +30,44 @@ body {
 .container {
   width: 100vw;
   height: auto;
-  padding: 0 12%;
+  padding: 0 200px;
 }
 
 #wrap {
   display: block;
 
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
+
   /* background-color: aqua;*/
 }
 
 /* =====헤더==== */
 
 .header {
+  position: relative;
   display: flex;
   width: 100%;
   height: 120px;
   position: fixed;
   top: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 9999;
   transition: all 0.4s;
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   align-items: center;
 }
-.header:hover {
-  width: 100vw;
-  height: calc(250px + 120px);
-  /* height: 200px; */
-}
+
 /* 헤더에 hover했을때 나오는 영역 */
 .header::before {
-  width: 100%;
+  /* width: 100%;
   height: 100px;
   content: "";
   position: absolute;
   top: 20px;
-  left: 0;
+  left: 0; */ */
   /* background-color: rgba(255, 255, 255, 0.7); */
-  /* border-bottom: 1px solid #d8d8d8; */
+  /* border-bottom: 1px solid #d8d8d8;
 }
 
 .header-inner {
@@ -86,14 +80,9 @@ body {
   z-index: 1;
 }
 
-.header-inner .hamburger {
-  position: absolute;;
-  top: 50%;
-  transform: translateY(-50%);
-}
 /* logo */
 .header .logo {
-  width: 10%;
+  width: 120px;
   height: 100%;
   display: flex;
   position: absolute;
@@ -104,27 +93,41 @@ body {
   height: 120px;
 }
 
+.header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #bb6363;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  display: none;
+}
 
 /* nav */
 .nav {
   /* background-color: antiquewhite; */
   /* height: 300px; */
-  width: 90%;
+  width: calc(100% - 100px - 120px);
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   margin: 0 auto;
+  background-color: #f43b00;
 }
+
 .gnb {
-  position: absolute;
+  width: 100%;
+  /* position: absolute; */
   top: 0;
   display: flex;
   gap: 3vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-left: 300px;
 
   /* margin: 0 100px; */
+  background-color: aquamarine;
 }
 
 .gnb-title {
@@ -156,9 +159,11 @@ body {
   line-height: 110px;
   padding: 0 10px;
 }
+
 .gnb a:hover {
   color: #ff592e;
 }
+
 .gnb > li:hover > a {
   color: #ff592e;
 }
@@ -185,23 +190,48 @@ body {
 .gnb_shop_btn:hover {
   background-color: #f43b00;
 }
+/* 메뉴 호버시 나타나기 */
+.header-sub {
+  width: 100vw;
+  height: calc(250px + 120px);
+  display: none;
+}
+
+.nav:hover .depth2 {
+  display: block;
+}
+.nav:hover .header-sub {
+  display: block;
+}
 
 .depth2 {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 10px;
+  position: absolute;
+  top: 120px;
+  height: 200px;
+  display: none;
 }
-.depth2 > li > a {
+
+.depth2 li a {
   color: #121212;
   font-size: 17px;
   font-weight: 500;
-  /* 숫자만 적으면 font size의 배수로 인식함.(15 * 1.95) */
-  line-height: 1.92;
 }
 
+/* 헤더 햄버거 아이콘 */
+
+.header-inner .hamburger {
+  display: flex;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.header-inner .hamburger img {
+  display: block;
+  width: 20px;
+}
 
 /* =====배너=====*/
 .banner {
@@ -224,18 +254,19 @@ body {
 /* 배경이미지 img 넣기 */
 .banner-texBox img {
   display: block;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
 }
 
 .banner-textBox {
   /* display: flex;
   flex-direction: column; */
   position: absolute;
+  width: 100%;
   height: auto;
   top: 500px;
   transform: translateY(-50%);
@@ -292,6 +323,7 @@ body {
 /* =====신메뉴===== */
 .new-menu {
   display: flex;
+  flex-direction: row;
   /* gap: 20px; */
   background: url("../images//bg_news-item.png") no-repeat;
   /* background-position: 0; */
@@ -300,9 +332,13 @@ body {
   margin: 0 auto;
   position: relative;
   top: 0;
+  gap: 50px;
 }
 
 .new-menu_titleBOX {
+  position: relative;
+  top: 0;
+  left: 40px;
   padding-top: 120px;
 }
 
@@ -745,6 +781,7 @@ body {
 
 /* footer-bt */
 .footer-bt {
+  display: flex;
   width: 100%;
   margin: 50px 0;
 }
@@ -957,3 +994,5 @@ body {
 .new-menu-list .swiper-button-prev::after {
   display: none;
 }
+
+/* === AOS 애니메이션 효과 ===*/
