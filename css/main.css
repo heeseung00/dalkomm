@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding: 0 200px;
 }
@@ -59,15 +59,15 @@ body {
 }
 
 /* 헤더에 hover했을때 나오는 영역 */
-.header::before {
-  /* width: 100%;
+/* .header::before { */
+/* width: 100%;
   height: 100px;
   content: "";
   position: absolute;
   top: 20px;
-  left: 0; */ */
-  /* background-color: rgba(255, 255, 255, 0.7); */
-  /* border-bottom: 1px solid #d8d8d8;
+  left: 0; */
+/* background-color: rgba(255, 255, 255, 0.7); */
+/* border-bottom: 1px solid #d8d8d8;
 }
 
 .header-inner {
@@ -76,62 +76,79 @@ body {
   align-items: center;
   width: 100%;
   /* max-width: 1800px; */
-  height: 120px;
+/* height: 120px;
   z-index: 1;
-}
+} */
 
 /* logo */
 .header .logo {
-  width: 120px;
+  width: 10%;
   height: 100%;
   display: flex;
   position: absolute;
+  justify-content: center;
 }
 
 .header .logo img {
   width: 120px;
   height: 120px;
 }
-
-.header::after {
-  content: "";
-  display: block;
-  width: 100%;
-  background-color: #bb6363;
-  height: 200px;
-  position: absolute;
-  top: 120px;
-  display: none;
-}
-
 /* nav */
-.nav {
-  /* background-color: antiquewhite; */
-  /* height: 300px; */
+/* .nav {
   width: calc(100% - 100px - 120px);
   height: 100%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   margin: 0 auto;
   background-color: #f43b00;
-}
+} */
 
 .gnb {
-  width: 100%;
+  width: 80%;
   /* position: absolute; */
   top: 0;
   display: flex;
   gap: 3vw;
+  justify-content: center;
   /* overflow: hidden; */
-  margin-left: 300px;
+  margin: 0 100px;
+  position: relative;
+  /* background-color: aquamarine; */
+}
 
-  /* margin: 0 100px; */
-  background-color: aquamarine;
+.gnb-hover-bg {
+  content: "";
+  opacity: 0;
+  width: 100vw;
+  background-color: #bb6363;
+  height: 200px;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  z-index: 999999;
+}
+
+/* 메뉴 호버시 나타나기 */
+/* .gnb::after {
+  content: "";
+  display: block;
+  width: 100%;
+} */
+
+.header-inner:hover .gnb-hover-bg {
+  opacity: 1;
+}
+
+.gnb > li {
+  display: flex;
+  justify-content: space-around;
 }
 
 .gnb-title {
   position: relative;
+  height: 120px;
+  line-height: 120px;
+  width: auto;
 }
 
 .gnb-title::after {
@@ -141,7 +158,8 @@ body {
   height: 2px;
   background-color: #ff592e;
   position: absolute;
-  top: 75px;
+  bottom: 0px;
+  left: 0;
 }
 
 .gnb-title:hover::after {
@@ -157,7 +175,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 110px;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .gnb a:hover {
@@ -166,10 +184,6 @@ body {
 
 .gnb > li:hover > a {
   color: #ff592e;
-}
-
-.gnb-title {
-  height: 110px;
 }
 
 /* nav 버튼 */
@@ -191,16 +205,11 @@ body {
   background-color: #f43b00;
 }
 /* 메뉴 호버시 나타나기 */
-.header-sub {
-  width: 100vw;
-  height: calc(250px + 120px);
-  display: none;
-}
 
-.nav:hover .depth2 {
+.gnb:hover .depth2 {
   display: block;
 }
-.nav:hover .header-sub {
+.gnb:hover .gnb-hover-bg {
   display: block;
 }
 
@@ -209,7 +218,18 @@ body {
   top: 120px;
   height: 200px;
   display: none;
+  z-index: 999999;
+
 }
+
+/* .depth2::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: #bb6363;
+  position: absolute;
+} */
 
 .depth2 li a {
   color: #121212;
@@ -221,6 +241,7 @@ body {
 
 .header-inner .hamburger {
   display: flex;
+  opacity: 0;
   width: 100px;
   position: absolute;
   top: 50%;
@@ -234,6 +255,15 @@ body {
 }
 
 /* =====배너=====*/
+
+.slider-banner {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
 .banner {
   /* background: url("../images/banner_img_row.png") no-repeat;
   background-size: cover; */
@@ -242,23 +272,13 @@ body {
   height: 1000px;
   position: relative;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
 }
 
 .swiper-slide {
-  width: 100%;
-}
-
-/* 배경이미지 img 넣기 */
-.banner-texBox img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  top: 0;
   width: 100%;
 }
 
@@ -272,6 +292,18 @@ body {
   transform: translateY(-50%);
   z-index: 999999;
   text-align: start;
+}
+
+/* 배경이미지 img 넣기 */
+.banner-texBox img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
 }
 
 .banner-textBox h1 {
@@ -625,8 +657,8 @@ body {
   padding: 0 12% 0 200px;
 }
 
-.marginal-textBox-right input {
-}
+/* .marginal-textBox-right input {
+} */
 
 .marginal-textBox-right h1,
 .marginal-textBox-right p {
@@ -832,8 +864,8 @@ body {
   appearance: none;
 }
 
-.family-site select option {
-}
+/* .family-site select option {
+} */
 
 /* .family-site option {
   position: absolute;
@@ -861,8 +893,8 @@ body {
   display: inline;
 }
 
-.copyright a {
-}
+/* .copyright a {
+} */
 
 .footer-bt-download {
   display: flex;

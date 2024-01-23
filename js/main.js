@@ -37,4 +37,4 @@ function FloatingWrap() {
 }
 
 // AOS 애니메이션
-AOS.init();
+// AOS.init();
