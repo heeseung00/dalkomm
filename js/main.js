@@ -36,5 +36,27 @@ function FloatingWrap() {
   floatingWrap.style.display = "none";
 }
 
+// 풀 드롭다운 메뉴 mouse(hover)효과 
+document.addEventListener('DOMContentLoaded', function() {
+  const gnbTitles = document.querySelectorAll('.gnb-title');
+  const depth2Menus = document.querySelectorAll('.depth2');
+
+  gnbTitles.forEach(title => {
+    title.addEventListener('mouseover', function() {
+      depth2Menus.forEach(depth2 => {
+        depth2.style.display = 'block';
+      });
+      document.querySelector('.header-gnb-bg').style.display = 'block';
+    });
+
+    title.addEventListener('mouseout', function() {
+      depth2Menus.forEach(depth2 => {
+        depth2.style.display = 'none';
+      });
+      document.querySelector('.header-gnb-bg').style.display = 'none';
+    });
+  });
+});
+
 // AOS 애니메이션
 // AOS.init();

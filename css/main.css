@@ -30,7 +30,7 @@ body {
 .container {
   width: 100%;
   height: auto;
-  padding: 0 200px;
+  padding: 0 150px;
 }
 
 #wrap {
@@ -42,113 +42,78 @@ body {
 }
 
 /* =====헤더==== */
-
-.header {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 120px;
+.header{
+  display: block;
   position: fixed;
   top: 0;
-  /* overflow: hidden; */
+  /* width: calc(100% - 110px); */
+  width: 100%;
+  height: 120px;
+  background-color: rgb(255, 216, 165);
   z-index: 9999;
-  transition: all 0.4s;
-  background-color: rgba(255, 255, 255, 0.8);
-  display: flex;
-  align-items: center;
 }
 
-/* 헤더에 hover했을때 나오는 영역 */
-/* .header::before { */
-/* width: 100%;
-  height: 100px;
-  content: "";
+.header-gnb-bg{
   position: absolute;
-  top: 20px;
-  left: 0; */
-/* background-color: rgba(255, 255, 255, 0.7); */
-/* border-bottom: 1px solid #d8d8d8;
+  top: 120px;
+  width: 100%;
+  height: 250px;
+  background-color: #f5e8e4;
+  display: none;
 }
 
-.header-inner {
+
+.header-inner{
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  /* max-width: 1800px; */
-/* height: 120px;
-  z-index: 1;
-} */
-
-/* logo */
-.header .logo {
-  width: 10%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  justify-content: center;
+  position: relative;
 }
 
-.header .logo img {
+.header .logo{
+  display: flex;
   width: 120px;
-  height: 120px;
-}
-/* nav */
-/* .nav {
-  width: calc(100% - 100px - 120px);
   height: 100%;
+  line-height: 120px;
+}
+
+.header .logo img{
+  width: 120px;
+}
+
+
+.gnb{
+  width: calc(100% - 120px);
+  /* height: 120px; */
+  background-color: #98847e;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  background-color: #f43b00;
-} */
+  align-items: center;
+ 
+  padding: 0 100px;
+  text-align: center;
+}
 
-.gnb {
-  width: 80%;
-  /* position: absolute; */
+.depth1{
+  width: auto;
+  height: 100%;
+  position: relative;
   top: 0;
   display: flex;
-  gap: 3vw;
   justify-content: center;
-  /* overflow: hidden; */
-  margin: 0 100px;
-  position: relative;
-  /* background-color: aquamarine; */
-}
-
-.gnb-hover-bg {
-  content: "";
-  opacity: 0;
-  width: 100vw;
-  background-color: #bb6363;
-  height: 200px;
-  position: absolute;
-  top: 120px;
-  left: 0;
-  z-index: 999999;
-}
-
-/* 메뉴 호버시 나타나기 */
-/* .gnb::after {
-  content: "";
-  display: block;
-  width: 100%;
-} */
-
-.header-inner:hover .gnb-hover-bg {
-  opacity: 1;
-}
-
-.gnb > li {
-  display: flex;
-  justify-content: space-around;
-}
-
-.gnb-title {
-  position: relative;
-  height: 120px;
+  align-items: center;
   line-height: 120px;
-  width: auto;
+  transition: all 0.3s;
+}
+
+.gnb-title{
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  font-weight: 800;
 }
 
 .gnb-title::after {
@@ -167,26 +132,27 @@ body {
   width: 100%;
 }
 
-.gnb > li {
-  width: 120px;
+/* 
+.gnb li:hover .header-gnb-bg{
+  display: block;
+} */
+
+.depth2{
+  position: absolute;
+  top: 120px;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* padding: 30px 0; */
+  /* background-color: aquamarine; */
 }
 
-.gnb > li > a {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 110px;
-  /* padding: 0 10px; */
+.depth2 li .depth2-text{
+  height: 100%
 }
 
-.gnb a:hover {
-  color: #ff592e;
-}
-
-.gnb > li:hover > a {
-  color: #ff592e;
-}
-
-/* nav 버튼 */
+/* gnb 버튼 */
 .gnb_shop_btn {
   width: 85px;
   height: 32px;
@@ -204,55 +170,18 @@ body {
 .gnb_shop_btn:hover {
   background-color: #f43b00;
 }
-/* 메뉴 호버시 나타나기 */
 
-.gnb:hover .depth2 {
-  display: block;
-}
-.gnb:hover .gnb-hover-bg {
-  display: block;
-}
+/* hover 효과 */
 
-.depth2 {
-  position: absolute;
-  top: 120px;
-  height: 200px;
-  display: none;
-  z-index: 999999;
 
+.gnb a:hover {
+  color: #ff592e;
 }
 
-/* .depth2::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 300px;
-  background-color: #bb6363;
-  position: absolute;
-} */
-
-.depth2 li a {
-  color: #121212;
-  font-size: 17px;
-  font-weight: 500;
+.gnb > li:hover > a {
+  color: #ff592e;
 }
 
-/* 헤더 햄버거 아이콘 */
-
-.header-inner .hamburger {
-  display: flex;
-  opacity: 0;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-}
-
-.header-inner .hamburger img {
-  display: block;
-  width: 20px;
-}
 
 /* =====배너=====*/
 
