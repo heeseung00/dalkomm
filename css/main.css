@@ -434,13 +434,11 @@ body {
   display: block;
   width: 100vw;
   height: 850px;
-  position: relative;
 }
 
 .notice-header {
   margin-bottom: 70px;
-  display: block;
-  margin: 0 auto;
+  
 }
 
 .notice-title {
