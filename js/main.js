@@ -36,7 +36,7 @@ function FloatingWrap() {
   floatingWrap.style.display = "none";
 }
 
-// // 풀 드롭다운 메뉴 mouse(hover)효과 
+// // 풀 드롭다운 메뉴 mouse(hover)효과
 // document.addEventListener('DOMContentLoaded', function() {
 //   const gnbTitles = document.querySelectorAll('.gnb-title');
 //   const depth2Menus = document.querySelectorAll('.depth2');
@@ -59,37 +59,37 @@ function FloatingWrap() {
 // });
 
 // depth2 영역 안에 있을 때 유지, 영역 밖으로 나가면 사라지는 효과 추가.
-document.addEventListener('DOMContentLoaded', function() {
-  const gnbTitles = document.querySelectorAll('.gnb-title');
-  const depth2Menus = document.querySelectorAll('.depth2');
-  const headerGnbBg = document.querySelector('.header-gnb-bg');
+document.addEventListener("DOMContentLoaded", function () {
+  const gnbTitles = document.querySelectorAll(".gnb-title");
+  const depth2Menus = document.querySelectorAll(".depth2");
+  const headerGnbBg = document.querySelector(".header-gnb-bg");
 
-  gnbTitles.forEach(title => {
-    title.addEventListener('mouseover', function() {
-      depth2Menus.forEach(depth2 => {
-        depth2.style.display = 'block';
+  gnbTitles.forEach((title) => {
+    title.addEventListener("mouseover", function () {
+      depth2Menus.forEach((depth2) => {
+        depth2.style.display = "block";
       });
-      headerGnbBg.style.display = 'block';
+      headerGnbBg.style.display = "block";
     });
 
-    title.addEventListener('mouseout', function(e) {
+    title.addEventListener("mouseout", function (e) {
       // Check if the mouse is outside the depth2 area
-      if (!e.relatedTarget || !e.relatedTarget.closest('.depth2')) {
-        depth2Menus.forEach(depth2 => {
-          depth2.style.display = 'none';
+      if (!e.relatedTarget || !e.relatedTarget.closest(".depth2")) {
+        depth2Menus.forEach((depth2) => {
+          depth2.style.display = "none";
         });
-        headerGnbBg.style.display = 'none';
+        headerGnbBg.style.display = "none";
       }
     });
   });
 
   // Close depth2 if the mouse leaves the depth2 area
-  headerGnbBg.addEventListener('mouseout', function(e) {
-    if (!e.relatedTarget || !e.relatedTarget.closest('.depth2')) {
-      depth2Menus.forEach(depth2 => {
-        depth2.style.display = 'none';
+  headerGnbBg.addEventListener("mouseout", function (e) {
+    if (!e.relatedTarget || !e.relatedTarget.closest(".depth2")) {
+      depth2Menus.forEach((depth2) => {
+        depth2.style.display = "none";
       });
-      headerGnbBg.style.display = 'none';
+      headerGnbBg.style.display = "none";
     }
   });
 });
