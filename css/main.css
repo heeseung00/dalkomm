@@ -25,6 +25,7 @@ body {
   width: 100%;
   height: 100vh;
   white-space: nowrap;
+  /* background-color: blanchedalmond; */
 }
 
 .container {
@@ -46,6 +47,7 @@ body {
   display: block;
   position: fixed;
   top: 0;
+  left: 0;
   /* width: calc(100% - 110px); */
   width: 100%;
   height: 110px;
@@ -89,28 +91,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 100px;
-  text-align: center;
+  padding: 0 200px;
+
+  /* text-align: center; */
 }
 
 .depth1 {
-  width: auto;
+  width: 100%;
   height: 100%;
   position: relative;
   top: 0;
+  left: 0;
   display: flex;
+  justify-content: center;
+  /* padding: 0 60px; */
+  margin: 0 50px;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center; */
   transition: all 0.3s;
+  /* padding: 0 50px; */
 }
 
 .gnb-title {
   width: 100%;
   height: 100%;
   line-height: 110px;
-  padding: 0 50px;
   display: flex;
+  justify-content: center;
+  gap: 0;
   font-weight: 800;
+  text-align: center;
 }
 
 .gnb-title::after {
@@ -120,7 +130,7 @@ body {
   height: 2px;
   background-color: #ff592e;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
 }
 
@@ -136,13 +146,13 @@ body {
 
 .depth2 {
   position: absolute;
-  top: 140px;
+  top: 120px;
   display: flex;
   /* display: none; */
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 210px;
-  padding: 20px 0;
   /* padding-right: -10px; */
   /* background-color: aquamarine; */
 }
@@ -150,8 +160,9 @@ body {
 .depth2 li .depth2-text {
   height: 100%;
   display: flex;
-  padding: 15px 50px;
+  padding: 15px 0px;
   text-align: center;
+  height: 50px;
 }
 
 /* gnb 버튼 */
@@ -161,6 +172,7 @@ body {
   border: 1px solid transparent;
   background-color: rgb(255, 89, 46);
   padding: 5px 15px;
+  margin-left: 30px;
   text-align: center;
   border-radius: 14px;
   font-size: 18px;
@@ -187,7 +199,6 @@ body {
 
 .slider-banner {
   display: flex;
-  width: 100vw;
   position: relative;
   top: 0px;
   left: 0px;
@@ -197,8 +208,8 @@ body {
   /* background: url("../images/banner_img_row.png") no-repeat;
   background-size: cover; */
   display: block;
-  width: 100vw;
-  height: 1000px;
+  width: 100%;
+  height: 1000%;
   position: relative;
   top: 0;
   left: 0;
@@ -208,17 +219,17 @@ body {
 }
 
 .swiper-slide {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .banner-textBox {
   /* display: flex;
   flex-direction: column; */
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   height: auto;
-  top: 500px;
-  transform: translateY(-50%);
+  top: 35%;
+  /* transform: translateY(-50%); */
   z-index: 999999;
   text-align: start;
 }
@@ -227,22 +238,23 @@ body {
 .banner-texBox img {
   display: block;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   right: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .banner-textBox h1 {
   /* font-size: 54px; */
   font-size: 60px;
-  width: 100%;
   line-height: 80px;
-  letter-spacing: -5px;
+  /* letter-spacing: -5px; */
   color: #f43b00;
   margin-bottom: 90px;
+  display: block;
 }
 
 .banner-bt-btn {
@@ -287,7 +299,8 @@ body {
   flex-direction: row;
   /* gap: 20px; */
   background: url("../images//bg_news-item.png") no-repeat;
-  /* background-position: 0; */
+  background-position: 0 0;
+  /* background-size: 100% 100%; */
   width: 100%;
   height: 1000px;
   margin: 0 auto;
@@ -342,7 +355,7 @@ body {
   overflow: hidden;
   position: absolute;
   top: 150px;
-  right: 0px;
+  left: 800px;
   font-size: 16px;
   text-align: center;
   color: #f43b00;
@@ -352,9 +365,9 @@ body {
   display: flex;
 }
 
-.new-menu-list ul li {
+/* .new-menu-list ul li {
   margin: 0 10px;
-}
+} */
 
 .new-menu-list ul li > * {
   margin-bottom: 10px;
@@ -381,7 +394,7 @@ body {
 .signature {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 750px;
   cursor: pointer;
   color: rgba(71, 71, 71, 0.8);
   background: url("../images/bg_signature-item.png") no-repeat;
@@ -428,39 +441,85 @@ body {
 
 /*====== notice ======*/
 .notice {
+  position: relative;
+  top: 0;
   display: block;
   width: 100vw;
   height: 850px;
 }
 
 .notice-header {
-  margin-bottom: 70px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 100px;
+}
+
+.notice-header::after {
+  content: "";
+  width: 35%;
+  height: 20px;
+  background-color: #eee;
+  position: absolute;
+  top: 80px;
+  left: 0;
+}
+
+.notice-header::before {
+  content: "";
+  width: 35%;
+  height: 20px;
+  background-color: #eee;
+  position: absolute;
+  top: 80px;
+  right: 0;
 }
 
 .notice-title {
+  display: block;
+  width: 100%;
+  height: 100%;
   font-size: 70px;
   color: #f43b00;
   font-weight: 800;
   text-align: center;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
+/* */
 .notice-wrap {
-  width: 100%;
   display: flex;
-  margin: 0 auto;
+  /* gap: 5px; */
+  width: 100vw;
 }
+
 .notice-list {
   display: flex;
-  margin: 0 25px;
+
+  justify-content: center;
+  /* margin: 0 25px; */
+  /* gap: 20px; */
+  /* width: calc(100% - 150px); */
+  width: 100%;
+}
+
+.notice-list:last-child {
+  display: flex;
+  gap: 0;
 }
 
 .notice-list a li {
   padding: 25px;
+  /* width: calc(100% / 3); */
+  /* width: 100%; */
   border: 2px solid #ff592e;
   color: #ff592e;
+  width: 26.2vw;
 }
 .notice-list a li img {
-  width: 400px;
+  width: 23.05vw;
+  text-align: center;
 }
 
 .notice-textBox {
@@ -479,6 +538,7 @@ body {
   font-size: 40px;
   margin-bottom: 20px;
   font-weight: 600;
+  /* 말줄임  */
   overflow: hidden;
   max-width: 400px;
   white-space: nowrap;
@@ -489,6 +549,12 @@ body {
 .notice-textBox p {
   color: #4b4a4a;
   font-size: 18px;
+  /* 말줄임  */
+  overflow: hidden;
+  max-width: 400px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 
 /* ===== 서포터즈 ===== */
@@ -695,10 +761,6 @@ body {
   margin-bottom: 45px;
 }
 
-.footer-top-text .title a:hover {
-  color: blue;
-}
-
 .footer-top-text p {
   font-size: 15px;
   margin-bottom: 25px;
@@ -709,6 +771,9 @@ body {
   font-weight: 500;
 }
 
+.title-contact a:hover::after {
+  background-color: #f43b00;
+}
 .footer-top-text a {
   position: relative;
 }
@@ -716,7 +781,7 @@ body {
 .footer-top-text a:hover {
   color: #000;
   font-weight: 700;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-out;
 }
 
 .footer-top-text a:hover::after {
@@ -727,8 +792,8 @@ body {
 .footer-top-text li p a::after {
   content: "";
   width: 0%;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.3);
+  height: 0.5px;
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -905,6 +970,7 @@ body {
   top: 15px;
   left: 17px;
   color: #fff;
+  height: 125px;
 }
 
 .signature-buy .textBox svg {
@@ -930,6 +996,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 9px;
+  margin-bottom: 40px;
   /* gap: 10px; */
 }
 
@@ -946,6 +1013,8 @@ body {
 }
 .new-menu-list .swiper-button-next {
   background: url(../images/btn_nav_next.png) no-repeat;
+  position: absolute;
+  right: 10px;
 }
 
 .new-menu-list .swiper-button-next::after,
