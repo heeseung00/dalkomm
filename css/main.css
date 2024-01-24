@@ -142,6 +142,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 210px;
+  padding: 20px 0;
   /* padding-right: -10px; */
   /* background-color: aquamarine; */
 }
