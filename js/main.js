@@ -82,5 +82,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
-// AOS 애니메이션
