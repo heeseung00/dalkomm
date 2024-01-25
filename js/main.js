@@ -30,6 +30,7 @@ $(document).ready(function () {
     },
   });
 
+  // AOS 애니메이션
   AOS.init();
 });
 
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// depth2 영역 안에 있을 때 유지, 영역 밖으로 나가면 사라지는 효과 추가.
+// gnb mouseover & mouseout 효과
 document.addEventListener("DOMContentLoaded", function () {
   const gnbTitles = document.querySelectorAll(".gnb-title");
   const depth2Menus = document.querySelectorAll(".depth2");
@@ -73,12 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Close depth2 if the mouse leaves the depth2 area
-  headerGnbBg.addEventListener("mouseout", function (e) {
-    if (!e.relatedTarget || !e.relatedTarget.closest(".depth2")) {
-      depth2Menus.forEach((depth2) => {
-        depth2.style.display = "none";
-      });
+  depth2Menus.forEach((depth2) => {
+    depth2.addEventListener("mouseleave", function () {
+      depth2.style.display = "none";
       headerGnbBg.style.display = "none";
-    }
+    });
   });
 });
