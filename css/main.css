@@ -31,7 +31,7 @@ body {
 .container {
   width: 100%;
   height: auto;
-  padding: 0 300px;
+  padding: 0 150px;
 }
 
 #wrap {
@@ -85,12 +85,11 @@ body {
 }
 
 .gnb {
-  /* width: calc(100% - 120px); */
-  width: 100%;
+  width: calc(100% - 120px);
   /* height: 120px; */
   /* background-color: #98847e; */
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   padding: 0 200px;
 
@@ -104,23 +103,13 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
   /* padding: 0 60px; */
-  margin: 0 40px;
+  margin: 0 50px;
+  /* justify-content: center; */
+  /* align-items: center; */
   transition: all 0.3s;
-}
-
-/* depth1 4번째 글자 점 추가 */
-.depth1:nth-child(4)::before {
-  content: "";
-  position: absolute;
-  top: 41%;
-  right: -7px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #ff592e;
+  /* padding: 0 50px; */
 }
 
 .gnb-title {
@@ -130,9 +119,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 0;
-  font-size: 17px;
-  font-weight: bold;
-  /* text-align: center; */
+  font-weight: 800;
+  text-align: center;
 }
 
 .gnb-title::after {
@@ -162,19 +150,20 @@ body {
   display: flex;
   /* display: none; */
   flex-direction: column;
-
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   height: 210px;
   display: none;
   /* padding-right: -10px; */
   /* background-color: aquamarine; */
 }
 
-.depth2 li a {
+.depth2 li .depth2-text {
+  height: 100%;
   display: flex;
-  padding: 20px 0;
-  height: 70px;
+  padding: 15px 0px;
+  text-align: center;
+  height: 50px;
 }
 
 /* gnb 버튼 */
@@ -228,9 +217,9 @@ body {
   z-index: 1;
 }
 
-/* .swiper-slide {
-  /* width: 100%; 
-} */
+.swiper-slide {
+  /* width: 100%; */
+}
 
 .banner-textBox {
   /* /* display: flex; */
