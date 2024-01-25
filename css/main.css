@@ -458,7 +458,7 @@ body {
 .notice-header::after {
   content: "";
   width: 35%;
-  height: 20px;
+  height: 17px;
   background-color: #eee;
   position: absolute;
   top: 80px;
@@ -468,7 +468,7 @@ body {
 .notice-header::before {
   content: "";
   width: 35%;
-  height: 20px;
+  height: 17px;
   background-color: #eee;
   position: absolute;
   top: 80px;
